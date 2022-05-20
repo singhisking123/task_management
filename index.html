@@ -92,7 +92,14 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addNewCard()"
+              data-bs-dismiss="modal"
+            >
+              Save changes
+            </button>
           </div>
         </div>
       </div>
@@ -162,137 +169,9 @@
       </section>
 
       <section class="task__container row">
-        <!-- CARD NO. 1 -->
-        <div class="col-md-6 col-lg-4 my-4">
-          <div class="card">
-            <div class="card-header gap-2 d-flex justify-content-end">
-              <button class="btn btn-outline-info" type="submit">
-                <i class="fa-solid fa-pencil"></i>
-                <!--upar wla Code is for the icon(pencil)-->
-              </button>
-              <button class="btn btn-outline-danger" type="submit">
-                <i class="fa-solid fa-trash"></i>
-                <!--upar wla Code is for the icon(delete)-->
-              </button>
-            </div>
-            <img
-              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
-              class="card-img-top"
-              alt="TaskImage"
-            />
-            <div class="card-body" style="background-color: rgb(184, 236, 184)">
-              <h5
-                class="task_card_title"
-                style="background-color: rgb(79, 237, 68)"
-              >
-                KGF
-              </h5>
-              <p
-                class="description trim-3-lines text-muted"
-                style="background-color: rgb(235, 117, 117)"
-              >
-                Jayda se Jayda Sona Nikalna hai !!
-              </p>
-            </div>
-            <div class="tags text-white" style="background-color: red">
-              <h4>
-                <span class="badge bg-primary">New</span>
-              </h4>
-            </div>
 
-            <div class="card-footer text-muted">
-              <a href="#" class="btn btn-outline-primary">Open Task</a>
-            </div>
-          </div>
-        </div>
 
-        <!-- CARD NO. 2 -->
-        <div class="col-md-6 col-lg-4 my-4">
-          <div class="card">
-            <div class="card-header gap-2 d-flex justify-content-end">
-              <button class="btn btn-outline-info" type="submit">
-                <i class="fa-solid fa-pencil"></i>
-                <!--upar wla Code is for the icon(pencil)-->
-              </button>
-              <button class="btn btn-outline-danger" type="submit">
-                <i class="fa-solid fa-trash"></i>
-                <!--upar wla Code is for the icon(delete)-->
-              </button>
-            </div>
-            <img
-              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
-              class="card-img-top"
-              alt="TaskImage"
-            />
-            <div class="card-body" style="background-color: rgb(184, 236, 184)">
-              <h5
-                class="task_card_title"
-                style="background-color: rgb(79, 237, 68)"
-              >
-                KGF
-              </h5>
-              <p
-                class="description trim-3-lines text-muted"
-                style="background-color: rgb(235, 117, 117)"
-              >
-                Jayda se Jayda Sona Nikalna hai !!
-              </p>
-            </div>
-            <div class="tags text-white" style="background-color: red">
-              <h4>
-                <span class="badge bg-primary">New</span>
-              </h4>
-            </div>
 
-            <div class="card-footer text-muted">
-              <a href="#" class="btn btn-outline-primary">Open Task</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD NO. 3 -->
-        <div class="col-md-6 col-lg-4 my-4">
-          <div class="card">
-            <div class="card-header gap-2 d-flex justify-content-end">
-              <button class="btn btn-outline-info" type="submit">
-                <i class="fa-solid fa-pencil"></i>
-                <!--upar wla Code is for the icon(pencil)-->
-              </button>
-              <button class="btn btn-outline-danger" type="submit">
-                <i class="fa-solid fa-trash"></i>
-                <!--upar wla Code is for the icon(delete)-->
-              </button>
-            </div>
-            <img
-              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
-              class="card-img-top"
-              alt="TaskImage"
-            />
-            <div class="card-body" style="background-color: rgb(184, 236, 184)">
-              <h5
-                class="task_card_title"
-                style="background-color: rgb(79, 237, 68)"
-              >
-                KGF
-              </h5>
-              <p
-                class="description trim-3-lines text-muted"
-                style="background-color: rgb(235, 117, 117)"
-              >
-                Jayda se Jayda Sona Nikalna hai !!
-              </p>
-            </div>
-            <div class="tags text-white" style="background-color: red">
-              <h4>
-                <span class="badge bg-primary">New</span>
-              </h4>
-            </div>
-
-            <div class="card-footer text-muted">
-              <a href="#" class="btn btn-outline-primary">Open Task</a>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
 
@@ -302,5 +181,99 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </body>
 </html>
+
+<!-- 
+
+
+        
+
+
+        <div class="col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <div class="card-header gap-2 d-flex justify-content-end">
+              <button class="btn btn-outline-info" type="submit">
+                <i class="fa-solid fa-pencil"></i>
+                <!--upar wla Code is for the icon(pencil)
+              </button>
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+                <!--upar wla Code is for the icon(delete)
+              </button>
+            </div>
+            <img
+              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
+              class="card-img-top"
+              alt="TaskImage"
+            />
+            <div class="card-body" style="background-color: rgb(184, 236, 184)">
+              <h5
+                class="task_card_title"
+                style="background-color: rgb(79, 237, 68)"
+              >
+                KGF
+              </h5>
+              <p
+                class="description trim-3-lines text-muted"
+                style="background-color: rgb(235, 117, 117)"
+              >
+                Jayda se Jayda Sona Nikalna hai !!
+              </p>
+            </div>
+            <div class="tags text-white" style="background-color: red">
+              <h4>
+                <span class="badge bg-primary">New</span>
+              </h4>
+            </div>
+
+            <div class="card-footer text-muted">
+              <a href="#" class="btn btn-outline-primary">Open Task</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD NO. 3 
+        <div class="col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <div class="card-header gap-2 d-flex justify-content-end">
+              <button class="btn btn-outline-info" type="submit">
+                <i class="fa-solid fa-pencil"></i>
+                <!--upar wla Code is for the icon(pencil)
+              </button>
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+                <!--upar wla Code is for the icon(delete)-
+              </button>
+            </div>
+            <img
+              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
+              class="card-img-top"
+              alt="TaskImage"
+            />
+            <div class="card-body" style="background-color: rgb(184, 236, 184)">
+              <h5
+                class="task_card_title"
+                style="background-color: rgb(79, 237, 68)"
+              >
+                KGF
+              </h5>
+              <p
+                class="description trim-3-lines text-muted"
+                style="background-color: rgb(235, 117, 117)"
+              >
+                Jayda se Jayda Sona Nikalna hai !!
+              </p>
+            </div>
+            <div class="tags text-white" style="background-color: red">
+              <h4>
+                <span class="badge bg-primary">New</span>
+              </h4>
+            </div>
+
+            <div class="card-footer text-muted">
+              <a href="#" class="btn btn-outline-primary">Open Task</a>
+            </div>
+          </div>
+        </div> -->
