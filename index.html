@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management APP</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body style="background-color: rgb(160, 160, 223)">
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="task__add"
+      tabindex="-1"
+      aria-labelledby="task__add__label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="task__add">Add New Task</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="imageURL" class="form-label">Image URL</label>
+              <input
+                type="url"
+                class="form-control"
+                id="imageURL"
+                placeholder="https://imgtot.uno/img.png"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Task Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="taskTitle"
+                placeholder="Learn Web Dev"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="taskType" class="form-label">Task Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="taskType"
+                placeholder="Work.."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label"
+                >Task Description</label
+              >
+              <textarea
+                class="form-control"
+                id="taskDescription"
+                placeholder="http://example.com/image.png"
+                rows="3"
+                required
+                autocomplete="off"
+                style="height: 160px"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer" style="background-color: orange">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: aqua">
+        <div class="container-fluid" style="background-color: rgb(70, 70, 201)">
+          <a class="navbar-brand" href="#">TaskY</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#task__add"
+            >
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              <!--upar wla Code is for the icon(+)-->
+              Add New
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container" style="background-color: rgb(235, 255, 14)">
+      <section
+        class="row justify-content-center mt-5"
+        style="background-color: green"
+      >
+        <div
+          class="col-md-8 col-lg-6"
+          style="background-color: rgb(23, 79, 23)"
+        >
+          <div
+            class="input-group mb-3 shadow bg-body rounded"
+            style="background-color: rgb(249, 175, 175)"
+          >
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search Task"
+              aria-label="Search Task"
+              aria-describedby="basic-addon1"
+            /><span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="task__container row">
+        <!-- CARD NO. 1 -->
+        <div class="col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <div class="card-header gap-2 d-flex justify-content-end">
+              <button class="btn btn-outline-info" type="submit">
+                <i class="fa-solid fa-pencil"></i>
+                <!--upar wla Code is for the icon(pencil)-->
+              </button>
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+                <!--upar wla Code is for the icon(delete)-->
+              </button>
+            </div>
+            <img
+              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
+              class="card-img-top"
+              alt="TaskImage"
+            />
+            <div class="card-body" style="background-color: rgb(184, 236, 184)">
+              <h5
+                class="task_card_title"
+                style="background-color: rgb(79, 237, 68)"
+              >
+                KGF
+              </h5>
+              <p
+                class="description trim-3-lines text-muted"
+                style="background-color: rgb(235, 117, 117)"
+              >
+                Jayda se Jayda Sona Nikalna hai !!
+              </p>
+            </div>
+            <div class="tags text-white" style="background-color: red">
+              <h4>
+                <span class="badge bg-primary">New</span>
+              </h4>
+            </div>
+
+            <div class="card-footer text-muted">
+              <a href="#" class="btn btn-outline-primary">Open Task</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD NO. 2 -->
+        <div class="col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <div class="card-header gap-2 d-flex justify-content-end">
+              <button class="btn btn-outline-info" type="submit">
+                <i class="fa-solid fa-pencil"></i>
+                <!--upar wla Code is for the icon(pencil)-->
+              </button>
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+                <!--upar wla Code is for the icon(delete)-->
+              </button>
+            </div>
+            <img
+              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
+              class="card-img-top"
+              alt="TaskImage"
+            />
+            <div class="card-body" style="background-color: rgb(184, 236, 184)">
+              <h5
+                class="task_card_title"
+                style="background-color: rgb(79, 237, 68)"
+              >
+                KGF
+              </h5>
+              <p
+                class="description trim-3-lines text-muted"
+                style="background-color: rgb(235, 117, 117)"
+              >
+                Jayda se Jayda Sona Nikalna hai !!
+              </p>
+            </div>
+            <div class="tags text-white" style="background-color: red">
+              <h4>
+                <span class="badge bg-primary">New</span>
+              </h4>
+            </div>
+
+            <div class="card-footer text-muted">
+              <a href="#" class="btn btn-outline-primary">Open Task</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD NO. 3 -->
+        <div class="col-md-6 col-lg-4 my-4">
+          <div class="card">
+            <div class="card-header gap-2 d-flex justify-content-end">
+              <button class="btn btn-outline-info" type="submit">
+                <i class="fa-solid fa-pencil"></i>
+                <!--upar wla Code is for the icon(pencil)-->
+              </button>
+              <button class="btn btn-outline-danger" type="submit">
+                <i class="fa-solid fa-trash"></i>
+                <!--upar wla Code is for the icon(delete)-->
+              </button>
+            </div>
+            <img
+              src="https://static.toiimg.com/photo/msid-90885676/90885676.jpg"
+              class="card-img-top"
+              alt="TaskImage"
+            />
+            <div class="card-body" style="background-color: rgb(184, 236, 184)">
+              <h5
+                class="task_card_title"
+                style="background-color: rgb(79, 237, 68)"
+              >
+                KGF
+              </h5>
+              <p
+                class="description trim-3-lines text-muted"
+                style="background-color: rgb(235, 117, 117)"
+              >
+                Jayda se Jayda Sona Nikalna hai !!
+              </p>
+            </div>
+            <div class="tags text-white" style="background-color: red">
+              <h4>
+                <span class="badge bg-primary">New</span>
+              </h4>
+            </div>
+
+            <div class="card-footer text-muted">
+              <a href="#" class="btn btn-outline-primary">Open Task</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
